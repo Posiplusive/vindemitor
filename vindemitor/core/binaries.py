@@ -31,6 +31,7 @@ ShakaPackager = find(
     f"packager-{__shaka_platform}-arm64",
     f"packager-{__shaka_platform}-x64"
 )
+Mp4Decrypt = find("mp4decrypt")
 Aria2 = find("aria2c", "aria2")
 CCExtractor = find(
     "ccextractor",
@@ -43,6 +44,6 @@ Caddy = find("caddy")
 
 
 __all__ = (
-    "FFMPEG", "FFProbe", "FFPlay", "SubtitleEdit", "ShakaPackager",
+    "FFMPEG", "FFProbe", "FFPlay", "SubtitleEdit", "ShakaPackager", "Mp4Decrypt",
     "Aria2", "CCExtractor", "HolaProxy", "MPV", "Caddy", "find"
 )

@@ -67,6 +67,7 @@ class Config:
         self.services: dict = kwargs.get("services") or {}
         self.set_terminal_bg: bool = kwargs.get("set_terminal_bg", True)
         self.tag: str = kwargs.get("tag") or ""
+        self.decryptor: str = kwargs.get("decryptor") or "shaka"
 
     @classmethod
     def from_yaml(cls, path: Path) -> Config:
