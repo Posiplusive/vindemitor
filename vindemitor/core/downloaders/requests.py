@@ -85,7 +85,10 @@ def download(
 
             try:
                 stream = session.get(url, stream=True, **kwargs)
-                stream.raise_for_status()
+                if stream.status_code == 404:
+                    pass
+                else:
+                    stream.raise_for_status()
 
                 if not segmented:
                     try:
